@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aceite para el frizz del cabello: suave y brillante</title>
+<meta name="description" content="Controla el frizz y logra un cabello brillante con aceite Pantene. Descubre cómo usarlo y por qué supera a otras opciones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#2a1b30;
+  --ciruela:#4b2a57;
+  --oro:#e3a722;
+  --oro-claro:#f6dca0;
+  --fondo:#f7f5fa;
+  --blanco:#ffffff;
+  --texto:#2e2433;
+  --suave:#6d6275;
+  --enlace:#1a0dab;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Source Sans 3",Arial,sans-serif;font-size:1.1rem;line-height:1.6;color:var(--texto);background:var(--fondo)}
+h1,h2,h3{font-family:"Bricolage Grotesque",Arial,sans-serif;line-height:1.15;color:var(--tinta);margin:0}
+a:focus-visible,button:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
+
+/* 1. Menú */
+.menu{background:var(--tinta);display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1.5rem;flex-wrap:wrap}
+.menu .marca{color:var(--oro-claro);font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:800;font-size:1.15rem}
+.btn-volver{background:var(--oro);color:var(--tinta);font-weight:600;text-decoration:none;padding:.55rem 1.1rem;border-radius:999px}
+.btn-volver:hover{background:var(--oro-claro)}
+
+.contenedor{max-width:980px;margin:0 auto;padding:0 1.25rem}
+
+/* 2. Vista previa en Google */
+.serp-zona{padding:2rem 0 0}
+.serp-zona p.etiqueta{margin:0 0 .6rem;color:var(--suave);font-size:.95rem}
+.serp{background:var(--blanco);border:1px solid #dcd6e2;border-radius:10px;padding:1rem 1.25rem;max-width:640px;font-family:Arial,sans-serif}
+.serp .url{color:#4d5156;font-size:.85rem;margin:0}
+.serp .titulo{color:var(--enlace);font-size:1.25rem;margin:.2rem 0;line-height:1.3}
+.serp .resumen{color:#545454;font-size:.9rem;margin:0;line-height:1.5}
+
+/* 3. Curiosidad */
+.hero{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;padding:3rem 0 2rem}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;max-width:15em}
+.hero p{max-width:34em;margin:1rem 0 0;color:var(--suave)}
+.gota{width:130px;height:130px;background:var(--oro);border-radius:50% 0 50% 50%;transform:rotate(45deg);box-shadow:inset -14px -14px 0 var(--oro-claro)}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;margin:2.5rem 0 1.25rem}
+.tarjetas{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.tarjeta{background:var(--blanco);border-top:5px solid var(--oro);border-radius:6px;padding:1.25rem}
+.tarjeta h3{font-size:1.2rem;font-weight:600;margin-bottom:.6rem}
+.tarjeta p{margin:0;font-size:1rem}
+
+/* 4. Comparación */
+.tabla-caja{overflow-x:auto;background:var(--blanco);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid #e6e0ec}
+thead th{background:var(--ciruela);color:var(--blanco);font-weight:600}
+thead th.nuestro{background:var(--oro);color:var(--tinta)}
+td.nuestro{background:#fff6dc;font-weight:600}
+.nota{color:var(--suave);font-size:.95rem;margin-top:.8rem}
+
+/* 5. Decisión */
+.decision{background:var(--ciruela);color:var(--blanco);margin-top:3rem;padding:2.5rem 0 3.5rem}
+.decision h2{color:var(--blanco);margin-top:0}
+.pregunta{background:rgba(255,255,255,.1);border-radius:6px;padding:1rem 1.25rem;margin-bottom:.9rem}
+.pregunta p{margin:0 0 .6rem;font-weight:600}
+.opciones{display:flex;gap:.6rem;flex-wrap:wrap}
+.opciones label{display:inline-flex;align-items:center;gap:.4rem;background:var(--blanco);color:var(--tinta);padding:.4rem .9rem;border-radius:999px;cursor:pointer}
+.opciones input{accent-color:var(--ciruela)}
+.btn-test,.btn-cta{font-family:inherit;font-weight:600;font-size:1.05rem;border:0;border-radius:999px;cursor:pointer;padding:.8rem 1.6rem}
+.btn-test{background:var(--oro-claro);color:var(--tinta)}
+.btn-cta{background:var(--oro);color:var(--tinta);font-size:1.2rem;padding:1rem 2rem;margin-top:1.2rem}
+.btn-test:hover,.btn-cta:hover{background:var(--blanco)}
+#resultado,#gracias{margin:1.2rem 0 0;font-size:1.1rem;min-height:1.6em}
+footer{padding:1.5rem;text-align:center;color:var(--suave);font-size:.95rem}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .gota{width:80px;height:80px;order:-1;margin:.5rem 0 0 .5rem}
+  .tarjetas{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- 1. Menú de navegación -->
+<nav class="menu" aria-label="Principal">
+  <span class="marca">Agencia Creativa</span>
+  <a class="btn-volver" href="index.html">← Volver a la portada</a>
+</nav>
+
+<main class="contenedor">
+
+  <!-- 2. Vista previa en Google -->
+  <section class="serp-zona" aria-label="Vista previa en Google">
+    <p class="etiqueta">Así se verá esta página en Google:</p>
+    <div class="serp">
+      <p class="url">https://tuagencia.github.io › seo.html</p>
+      <p class="titulo">Aceite para el frizz del cabello: suave y brillante</p>
+      <p class="resumen">Controla el frizz y logra un cabello brillante con aceite Pantene. Descubre cómo usarlo y por qué supera a otras opciones.</p>
+    </div>
+  </section>
+
+  <!-- 3. Fase Curiosidad -->
+  <header class="hero">
+    <div>
+      <h1>Aceite para el frizz del cabello: suave y brillante</h1>
+      <p>En Lima, la humedad puede esponjar tu cabello en minutos. Con estos consejos lo controlas sin dejarlo grasoso.</p>
+    </div>
+    <div class="gota" aria-hidden="true"></div>
+  </header>
+
+  <section>
+    <h2>Consejos para controlar el frizz en casa</h2>
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <h3>Aplícalo en cabello húmedo</h3>
+        <p>Reparte <strong>2 o 3 gotas</strong> de medios a puntas. Así el aceite <strong>sella la humedad</strong> y reduce el esponjamiento.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Usa poca cantidad</h3>
+        <p>El exceso <strong>engrasa</strong> el cabello. Empieza con <strong>pocas gotas</strong> y agrega solo si tus puntas siguen secas.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Cuida el calor</h3>
+        <p>La plancha a máxima temperatura <strong>reseca la fibra</strong>. Usa calor medio y, si puedes, <strong>seca al aire</strong>.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. Fase Comparación -->
+  <section>
+    <h2>Aceite Pantene frente a otras opciones</h2>
+    <div class="tabla-caja">
+      <table>
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th class="nuestro">Aceite Pantene</th>
+            <th>Crema para peinar</th>
+            <th>Aceite de coco casero</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Control del frizz</td><td class="nuestro">Alto</td><td>Medio</td><td>Medio</td></tr>
+          <tr><td>Brillo</td><td class="nuestro">Alto</td><td>Bajo</td><td>Alto</td></tr>
+          <tr><td>Sensación grasosa</td><td class="nuestro">Baja</td><td>Baja</td><td>Alta</td></tr>
+          <tr><td>Tiempo de uso</td><td class="nuestro">2 minutos</td><td>3 minutos</td><td>30 minutos o más</td></tr>
+          <tr><td>Se consigue en</td><td class="nuestro">Supermercados y farmacias</td><td>Supermercados</td><td>Mercados</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="nota">Valores de referencia para comparar. Cambia estos datos por los de tu investigación.</p>
+  </section>
+</main>
+
+<!-- 5. Fase Decisión -->
+<section class="decision">
+  <div class="contenedor">
+    <h2>¿Este aceite es para tu cabello?</h2>
+    <div class="pregunta">
+      <p>¿Tu cabello se esponja con la humedad?</p>
+      <div class="opciones">
+        <label><input type="radio" name="p1" value="1"> Sí</label>
+        <label><input type="radio" name="p1" value="0"> No</label>
+      </div>
+    </div>
+    <div class="pregunta">
+      <p>¿Se ve opaco o sin brillo?</p>
+      <div class="opciones">
+        <label><input type="radio" name="p2" value="1"> Sí</label>
+        <label><input type="radio" name="p2" value="0"> No</label>
+      </div>
+    </div>
+    <div class="pregunta">
+      <p>¿Se te enreda al peinarlo?</p>
+      <div class="opciones">
+        <label><input type="radio" name="p3" value="1"> Sí</label>
+        <label><input type="radio" name="p3" value="0"> No</label>
+      </div>
+    </div>
+    <button class="btn-test" type="button" id="ver">Ver mi resultado</button>
+    <p id="resultado" role="status"></p>
+    <button class="btn-cta" type="button" id="cta">¡Quiero mi cabello sin frizz!</button>
+    <p id="gracias" role="status"></p>
+  </div>
+</section>
+
+<footer>Proyecto académico de la Agencia Creativa. Universidad ESAN, ciclo 2026-2.</footer>
+
+<script>
+document.getElementById("ver").addEventListener("click", function () {
+  var total = 0, respondidas = 0;
+  ["p1", "p2", "p3"].forEach(function (n) {
+    var marcada = document.querySelector('input[name="' + n + '"]:checked');
+    if (marcada) { respondidas++; total += Number(marcada.value); }
+  });
+  var salida = document.getElementById("resultado");
+  if (respondidas < 3) {
+    salida.textContent = "Responde las 3 preguntas para ver tu resultado.";
+  } else if (total >= 2) {
+    salida.textContent = "Tu cabello necesita este aceite. Te ayudará con el frizz y el brillo.";
+  } else if (total === 1) {
+    salida.textContent = "Te puede servir, sobre todo en las puntas. Pruébalo con pocas gotas.";
+  } else {
+    salida.textContent = "Tu cabello está bien. Úsalo solo en días de mucha humedad.";
+  }
+});
+document.getElementById("cta").addEventListener("click", function () {
+  document.getElementById("gracias").textContent = "¡Genial! Muy pronto podrás conseguir tu aceite Pantene.";
+});
+</script>
+</body>
+</html>
